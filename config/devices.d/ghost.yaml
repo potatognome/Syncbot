@@ -1,0 +1,82 @@
+name: Ghost Desktop
+role: primary
+hostname: GHOST
+manufacturer: GIGABYTE
+model: G6X9KG
+os: Microsoft Windows 11 Home
+os_version: 10.0.26200 Build 26200
+enabled: true
+description: Gigabyte Laptop - Main development machine (Windows Dev)
+DEFAULT_USER: CURRENT_USER
+DEFAULT_GROUP: CURRENT_GROUP
+IGNORE_FOLDERS:
+- logFiles
+- logs
+IGNORE_FILES: []
+HUB_ASSIGNMENTS:
+- nas_primary
+- onedrive_fallback
+HUBS:
+  nas_primary:
+    repository_role: HUB
+    repository_type: STANDARD
+    hub_device: nas
+    path: \\192.168.0.2\devsrc
+    is_primary: false
+    enabled: true
+  onedrive_fallback:
+    repository_role: HUB
+    repository_type: STANDARD
+    hub_device: onedrive
+    path: ./_backup
+    is_primary: false
+    enabled: true
+  nas_dev-core_[project]:
+    name: NAS Dev-Core [PROJECT]
+    path: //192.168.0.2/devsrc/dev_ghost/_PROJECTS
+    is_primary: false
+    enabled: true
+    repository_role: HUB
+    description: Added from Syncbot menu
+    user_group: ''
+    last_validated: '2026-04-17T20:47:11'
+  dev-src_on_nas_[folder]:
+    name: DEV-SRC on NAS [FOLDER]
+    path: //192.168.0.2/devsrc/dev_ghost
+    is_primary: true
+    enabled: true
+    repository_role: HUB
+    description: Added from Syncbot menu
+    user_group: ''
+    last_validated: '2026-04-17T20:49:48'
+NODES:
+  dev_local_main:
+    repository_role: NODE
+    repository_type: STANDARD
+    path: .
+    connected_hub_IDs:
+    - nas_primary
+    - onedrive_fallback
+    is_primary: true
+    enabled: true
+    Recursive: true
+    remove_orphaned_files: true
+    create_versioned_backups: false
+    only_update_newer: true
+    is_project_folder: false
+  /dev_local/:
+    name: /dev_local/
+    path: ./Dev
+    is_primary: false
+    enabled: true
+    repository_role: NODE
+    node_type: PROJECT
+    ownership: danie:daniel
+    description: Added from Syncbot menu
+SYNC_OPTION_OVERRIDES:
+  remove_orphaned_files: true
+  create_versioned_backups: false
+  only_update_newer: true
+  excluded_folders:
+  - logFiles
+  - logs

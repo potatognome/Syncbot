@@ -1,0 +1,71 @@
+name: NAS Storage Server (192.168.0.2)
+role: hub
+hostname: nas.local
+manufacturer: Unknown
+model: Network Attached Storage
+os: Unknown
+os_version: Unknown
+
+enabled: true
+description: Network Attached Storage - Central backup hub for all devices
+
+# Device-level defaults
+DEFAULT_USER: CURRENT_USER
+DEFAULT_GROUP: CURRENT_GROUP
+IGNORE_FOLDERS:
+  - logFiles
+  - logs
+IGNORE_FILES: []
+HUB_ASSIGNMENTS: [nas_devsrc_hub]
+
+# Repository-to-repository model
+HUBS:
+  nas_devsrc_hub:
+    repository_role: HUB
+    repository_type: STANDARD
+    path: "\\\\192.168.0.2\\devsrc"
+    is_primary: true
+    enabled: true
+
+NODES:
+  ghost_dev_local:
+    repository_role: NODE
+    repository_type: STANDARD
+    source_device: ghost
+    path: "."
+    connected_hub_IDs: [nas_devsrc_hub]
+    is_primary: false
+    enabled: true
+    Recursive: true
+    remove_orphaned_files: true
+    create_versioned_backups: false
+    only_update_newer: true
+    is_project_folder: false
+
+excluded_repositories:
+  - git_forks
+  - pi
+  - venv
+  - "*.whl"
+  - "*.egg"
+
+# Hub-specific sync options
+SYNC_OPTION_OVERRIDES:
+  remove_orphaned_files: false
+  create_versioned_backups: false
+  only_update_newer: true
+  conflict_resolution: newest_wins
+  dry_run_default: false
+  excluded_folders:
+  - ".pytest_cache"
+  - ".git"
+  - "__pycache__"
+  - ".vscode"
+  - "node_modules"
+  - "venv"
+  - ".venv"
+  - "build"
+  - "dist"
+  - "*.egg-info"
+  - "logFiles"
+  - "logs"

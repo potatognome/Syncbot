@@ -1,0 +1,133 @@
+{
+    "INFO": {
+        "PROJECT_NAME"           : "Syncbot",
+        "PROJECT_FOLDER"         : "Syncbot",
+        "PROJECT_DESCRIPTION"    : "Device-centric backup and synchronization utility for multi-device project management",
+        "AUTHOR"                 : "Daniel Austin <the.potato.gnome@gmail.com>",
+        "VERSION"                : "0.5.0",
+        "MAIN_ENTRY_POINT"       : "src/Syncbot/main.py",
+        "BUILD_TYPE"             : "Core",
+        "LICENSE_TYPE"           : "MIT"
+    },
+    "ROOTS": {
+        "PROJECT"                : "./Applications/Syncbot",
+        "WORKSPACE"              : ".",
+        "TUILKIT"                : "./Core/tUilKit"
+    },
+    "ROOT_MODES": {
+        "ROOT_MODES: project"    : "Paths are relative to the project root.",
+        "ROOT_MODES: workspace"  : "Paths are relative to the workspace root.",
+        "CONFIG"                 : "project",
+        "LOGS"                   : "project",
+        "INPUTS"                 : "project",
+        "OUTPUTS"                : "project",
+        "TEST_CONFIG"            : "workspace",
+        "TEST_LOGS"              : "workspace",
+        "TEST_INPUTS"            : "workspace",
+        "TEST_OUTPUTS"           : "workspace"
+    },
+    "PATHS": {
+        "CONFIG"                 : "config/",
+        "LOGS"                   : ".logs/",
+        "INPUTS"                 : "config/devices.d/",
+        "OUTPUTS"                : ".outputs/",
+        "TEST_CONFIG"            : ".tests_config/",
+        "TEST_LOGS"              : ".tests_logs/Syncbot/",
+        "TEST_INPUTS"            : ".tests_data/Syncbot/inputs/",
+        "TEST_OUTPUTS"           : ".tests_data/Syncbot/outputs/"
+    },
+    "SHARED_CONFIG": {
+        "ENABLED"  : true,
+        "PATH"     : "GLOBAL_SHARED.d/",
+        "FILES": {
+            "COLOURS"            : "COLOURS.json",
+            "BORDER_PATTERNS"    : "BORDER_PATTERNS.json",
+            "TESTS_OPTIONS"      : "TESTS_OPTIONS.json",
+            "TIME_STAMP_OPTIONS" : "TIME_STAMP_OPTIONS.json"
+        }
+    },
+    "ALT_CONFIG": {
+        "ENABLED"  : false,
+        "PATH"     : "",
+        "FILES": {
+            "COLOURS"            : "",
+            "BORDER_PATTERNS"    : "",
+            "TESTS_OPTIONS"      : "",
+            "TIME_STAMP_OPTIONS" : ""
+        }
+    },
+    "LOG_FILES": {
+        "MASTER"                 : "Syncbot_MASTER.log",
+        "SESSION"                : "Syncbot_SESSION.log",
+        "RUNTIME"                : "Syncbot_RUNTIME.log",
+        "ERROR"                  : "Syncbot_ERROR.log",
+        "DEBUG"                  : "Syncbot_DEBUG.log",
+        "WARNING"                : "Syncbot_WARNING.log",
+        "INIT"                   : "Syncbot_INIT.log",
+        "FS"                     : "Syncbot_FS.log"
+    },
+    "LOG_CATEGORIES": {
+        "default": [
+            "MASTER",
+            "SESSION",
+            "RUNTIME"
+        ],
+        "error": [
+            "MASTER",
+            "SESSION",
+            "RUNTIME",
+            "ERROR"
+        ],
+        "fs": [
+            "MASTER",
+            "SESSION",
+            "RUNTIME",
+            "FS"
+        ],
+        "init": [
+            "MASTER",
+            "SESSION",
+            "RUNTIME",
+            "INIT"
+        ],
+        "debug": [
+            "MASTER",
+            "SESSION",
+            "RUNTIME",
+            "DEBUG"
+        ],
+        "warning": [
+            "MASTER",
+            "SESSION",
+            "RUNTIME",
+            "WARNING"
+        ],
+        "all": [
+            "MASTER",
+            "SESSION",
+            "RUNTIME",
+            "ERROR",
+            "FS",
+            "INIT",
+            "DEBUG",
+            "WARNING"
+        ]
+    },
+
+    "INFO_DISPLAY"               : "VERBOSE",
+    "WORKSPACE": {
+        "base_path": ".",
+        "backup_destination": "./_backup",
+        "description": "Primary development workspace"
+    },
+    "BACKUP_MODE": {
+        "mode": "repository_folder",
+        "description": "Backup mode: 'repository_folder' scans configured umbrella folders; 'single_folder' backs up one explicit folder target",
+        "repository_folder_umbrellas": [
+            "Dev",
+            "Dev_Applications"
+        ],
+        "single_folder_target": null
+    }
+}
+

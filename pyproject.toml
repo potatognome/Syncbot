@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Syncbot"
+version = "0.5.0"
+description = "Retrofit Scaffold for the Syncbot backup utility (5yncb07)"
+readme = "README.md"
+requires-python = ">=3.7"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Daniel Austin <the.potato.gnome@gmail.com>" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+dependencies = [
+    "tUilKit>=0.7.1",
+    "pyyaml",
+]
+
+[project.scripts]
+Syncbot = "Syncbot.main:main"
+
+[tool.setuptools]
+packages = ["Syncbot"]
+package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+Syncbot = ["config/*.json", "config/*.yaml", "config/devices.d/*.yaml"]
+
+
