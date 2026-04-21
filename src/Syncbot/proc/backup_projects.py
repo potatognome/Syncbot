@@ -49,7 +49,7 @@ def get_workspace_config():
         "base_path": Path(workspace.get("base_path", Path("."))),
         "backup_destination": Path(workspace.get("backup_destination", "./_backup")),
         "mode": backup_mode.get("mode", "repository_folder"),
-        "umbrellas": backup_mode.get("repository_folder_umbrellas", ["Dev", "Dev_Applications"]),
+        "umbrellas": backup_mode.get("repository_folder_umbrellas", ["Core", "Applications"]),
         "single_target": backup_mode.get("single_folder_target", None)
     }
 
