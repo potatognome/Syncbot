@@ -78,9 +78,7 @@
         "DEBUG": "Syncbot_DEBUG.log",
         "WARNING": "Syncbot_WARNING.log",
         "INIT": "Syncbot_INIT.log",
-        "FS": "Syncbot_FS.log",
-        "TRY": "Syncbot_TRY.log",
-        "CONFIG_READ": "Syncbot_CONFIG_READ.log"
+        "FS": "Syncbot_FS.log"
     },
     "LOG_CATEGORIES": {
         "default": [

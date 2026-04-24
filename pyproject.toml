@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "Syncbot"
-version = "0.5.0"
+version = "0.5.9"
 description = "Retrofit Scaffold for the Syncbot backup utility (5yncb07)"
 readme = "README.md"
 requires-python = ">=3.7"
@@ -31,5 +31,7 @@ package-dir = {"" = "src"}
 
 [tool.setuptools.package-data]
 Syncbot = ["config/*.json", "config/*.yaml", "config/devices.d/*.yaml"]
+
+
 
 
