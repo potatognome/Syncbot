@@ -1,0 +1,12 @@
+{
+  "tuilkit_config_file": "C:\\Repository\\Daniel\\dev_local\\Core\\tUilKit\\config\\tUilKit_CONFIG.json",
+  "project_name": "Syncbot",
+  "config_file": "C:\\Repository\\Daniel\\dev_local\\Core\\Syncbot\\config\\Syncbot_CONFIG.json",
+  "project_root": "C:\\Repository\\Daniel\\dev_local\\Core\\Syncbot",
+  "workspace_root": "C:\\Repository\\Daniel\\dev_local",
+  "config_folder": "C:\\Repository\\Daniel\\dev_local\\Core\\Syncbot\\config",
+  "test_logs_folder": "C:\\Repository\\Daniel\\dev_local\\.tests_logs\\Syncbot",
+  "logs_folder": "C:\\Repository\\Daniel\\dev_local\\.logs\\Syncbot",
+  "tests_inputs_folder": "C:\\Repository\\Daniel\\dev_local\\.tests_data",
+  "tests_outputs_folder": "C:\\Repository\\Daniel\\dev_local\\.tests_data\\output"
+}

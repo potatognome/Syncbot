@@ -143,5 +143,8 @@
             "Dev_Applications"
         ],
         "single_folder_target": null
+    },
+    "SECONDARY": {
+        "FILE": "Syncbot_SECONDARY.json"
     }
 }

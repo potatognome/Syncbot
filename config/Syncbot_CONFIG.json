@@ -10,9 +10,9 @@
         "LICENSE_TYPE": "MIT"
     },
     "ROOTS": {
-        "PROJECT": "./Applications/Syncbot",
-        "WORKSPACE": ".",
-        "TUILKIT": "./Core/tUilKit"
+        "PROJECT": "C:/Repository/Daniel/dev_local/Core/Syncbot",
+        "WORKSPACE": "C:/Repository/Daniel/dev_local",
+        "TUILKIT": "C:/Repository/Daniel/dev_local/Core/tUilKit"
     },
     "ROOT_MODES": {
         "ROOT_MODES: project": "Paths are relative to the project root.",
@@ -35,7 +35,7 @@
     },
     "PATHS": {
         "CONFIG": "config/",
-        "LOGS": ".logs/",
+        "LOGS": ".logs/Syncbot/",
         "INPUTS": "config/devices.d/",
         "OUTPUTS": ".outputs/",
         "TEST_CONFIG": ".tests_config/",
@@ -69,6 +69,9 @@
             "TESTS_OPTIONS": "",
             "TIME_STAMP_OPTIONS": ""
         }
+    },
+    "SECONDARY": {
+        "FILE": "Syncbot_SECONDARY.json"
     },
     "LOG_FILES": {
         "MASTER": "Syncbot_MASTER.log",
@@ -143,8 +146,5 @@
             "Dev_Applications"
         ],
         "single_folder_target": null
-    },
-    "SECONDARY": {
-        "FILE": "Syncbot_SECONDARY.json"
     }
 }
