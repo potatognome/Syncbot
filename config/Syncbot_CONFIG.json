@@ -7,7 +7,8 @@
         "VERSION": "0.5.0",
         "MAIN_ENTRY_POINT": "src/Syncbot/main.py",
         "BUILD_TYPE": "Core",
-        "LICENSE_TYPE": "MIT"
+        "LICENSE_TYPE": "MIT",
+        "COLOUR_FSTR": "!project"
     },
     "ROOTS": {
         "PROJECT": "C:/Repository/Daniel/dev_local/Core/Syncbot",
