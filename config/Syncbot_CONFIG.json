@@ -14,7 +14,8 @@
     "ROOTS": {
         "PROJECT": "C:/Repository/Daniel/dev_local/Core/Syncbot",
         "WORKSPACE": "C:/Repository/Daniel/dev_local",
-        "TUILKIT": "C:/Repository/Daniel/dev_local/Core/tUilKit"
+        "TUILKIT": "C:/Repository/Daniel/dev_local/Core/tUilKit",
+        "TUILKit": "C:/Repository/Daniel/dev_local/Core/tUilKit"
     },
     "ROOT_MODES": {
         "ROOT_MODES: project": "Paths are relative to the project root.",
@@ -42,28 +43,9 @@
         "TESTS_INPUTS": "tests/.inputData/",
         "TESTS_OUTPUTS": "tests/.outputData/"
     },
-    "SHARED_CONFIG": {
-        "ENABLED": true,
-        "PATH": "GLOBAL_SHARED.d/",
-        "FILES": {
-            "COLOURS": "COLOURS.json",
-            "BORDER_PATTERNS": "BORDER_PATTERNS.json",
-            "TESTS_OPTIONS": "TESTS_OPTIONS.json",
-            "TIME_STAMP_OPTIONS": "TIME_STAMP_OPTIONS.json"
-        }
-    },
     "ALT_CONFIG": {
         "ENABLED": false,
-        "PATH": "",
-        "FILES": {
-            "COLOURS": "",
-            "BORDER_PATTERNS": "",
-            "TESTS_OPTIONS": "",
-            "TIME_STAMP_OPTIONS": ""
-        }
-    },
-    "SECONDARY": {
-        "FILE": "Syncbot_SECONDARY.json"
+        "FILE_PATHS": []
     },
     "LOG_FILES": {
         "DEBUG": "Syncbot_DEBUG.log",
@@ -76,6 +58,9 @@
         "FS": "Syncbot_FS.log",
         "CONFIG_READ": "Syncbot_CONFIG_READ.log",
         "ERROR": "Syncbot_ERROR.log"
+    },
+    "SECONDARY": {
+        "FILE": "Syncbot_SECONDARY.json"
     },
     "LOG_CATEGORIES": {
         "debug": [
@@ -134,6 +119,16 @@
             "CONFIG_READ",
             "ERROR"
         ]
+    },
+    "SHARED_CONFIG": {
+        "ENABLED": true,
+        "PATH": "GLOBAL_SHARED.d/",
+        "FILES": {
+            "COLOURS": "COLOURS.json",
+            "BORDER_PATTERNS": "BORDER_PATTERNS.json",
+            "TESTS_OPTIONS": "TESTS_OPTIONS.json",
+            "TIME_STAMP_OPTIONS": "TIME_STAMP_OPTIONS.json"
+        }
     },
     "INFO_DISPLAY": "VERBOSE",
     "WORKSPACE": {

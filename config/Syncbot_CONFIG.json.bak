@@ -14,7 +14,8 @@
     "ROOTS": {
         "PROJECT": "C:/Repository/Daniel/dev_local/Core/Syncbot",
         "WORKSPACE": "C:/Repository/Daniel/dev_local",
-        "TUILKIT": "C:/Repository/Daniel/dev_local/Core/tUilKit"
+        "TUILKIT": "C:/Repository/Daniel/dev_local/Core/tUilKit",
+        "TUILKit": "C:/Repository/Daniel/dev_local/Core/tUilKit"
     },
     "ROOT_MODES": {
         "ROOT_MODES: project": "Paths are relative to the project root.",
@@ -54,13 +55,7 @@
     },
     "ALT_CONFIG": {
         "ENABLED": false,
-        "PATH": "",
-        "FILES": {
-            "COLOURS": "",
-            "BORDER_PATTERNS": "",
-            "TESTS_OPTIONS": "",
-            "TIME_STAMP_OPTIONS": ""
-        }
+        "FILE_PATHS": []
     },
     "SECONDARY": {
         "FILE": "Syncbot_SECONDARY.json"
