@@ -25,9 +25,18 @@ def resolve_syncbot_config_path(anchor_file=None):
             project_root = anchor.parent
 
     workspace_root = project_root.parent.parent
+    prismata_workspace_config = (
+        workspace_root
+        / "Prismata"
+        / ".workspace"
+        / ".projects_config"
+        / "Syncbot_CONFIG.json"
+    )
     workspace_config = workspace_root / ".projects_config" / "Syncbot_CONFIG.json"
     local_config = project_root / "config" / "Syncbot_CONFIG.json"
 
+    if prismata_workspace_config.exists():
+        return prismata_workspace_config
     if workspace_config.exists():
         return workspace_config
     return local_config

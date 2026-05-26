@@ -1,3 +1,9 @@
+## [0.5.10] - 2026-05-26
+- VERSION UPDATED: 0.5.9 -> 0.5.10.
+- Repaired workspace-root configuration drift and restored deterministic Syncbot config bootstrap resolution.
+- Updated workspace-rooted config/log paths to target Prismata `.workspace` storage.
+- Verified tests pass (`6 passed`).
+
 ## [0.5.0] - 2026-04-19
 - Workspace migration to Core/SuiteTools/Applications layout.
 - Path normalization for portable multi-device use (no machine-specific absolute roots).
