@@ -45,4 +45,5 @@ def resolve_syncbot_config_path(anchor_file=None):
 def bootstrap_syncbot_config_loader(anchor_file=None):
     """Inject Syncbot ConfigLoader into tUilKit factory singleton."""
     config_path = resolve_syncbot_config_path(anchor_file)
-    tUilKit.factories._config_loader = ConfigLoader(config_path=str(config_path))
+    import tUilKit.factories as _factories_mod  # noqa: PLC0415
+    _factories_mod._config_loader = ConfigLoader(config_path=str(config_path))

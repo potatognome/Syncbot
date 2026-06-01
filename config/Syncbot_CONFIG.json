@@ -1,4 +1,4 @@
-{
+﻿{
     "INFO": {
         "PROJECT_NAME": "Syncbot",
         "PROJECT_FOLDER": "Syncbot",
@@ -12,10 +12,10 @@
         "LICENSE": "$PROJECT_LICENSE"
     },
     "ROOTS": {
-        "PROJECT": "C:/Repository/Daniel/dev_local/Core/Syncbot",
-        "WORKSPACE": "C:/Repository/Daniel/dev_local/Prismata",
-        "TUILKIT": "C:/Repository/Daniel/dev_local/Core/tUilKit",
-        "TUILKit": "C:/Repository/Daniel/dev_local/Core/tUilKit"
+        "PROJECT": "C:/Repository/Daniel/dev_local/Prismata/Projects/Infrastructure/Syncbot",
+        "WORKSPACE": "C:/Repository/Daniel/dev_local",
+        "TUILKIT": "C:/Repository/Daniel/dev_local/Prismata/Projects/Core/tUilKit",
+        "TUILKit": "C:/Repository/Daniel/dev_local/Prismata/Projects/Core/tUilKit"
     },
     "ROOT_MODES": {
         "ROOT_MODES: project": "Paths are relative to the project root.",
@@ -137,3 +137,4 @@
         "single_folder_target": null
     }
 }
+
