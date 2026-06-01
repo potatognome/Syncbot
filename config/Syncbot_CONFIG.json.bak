@@ -4,7 +4,7 @@
         "PROJECT_FOLDER": "Syncbot",
         "PROJECT_DESCRIPTION": "Device-centric backup and synchronization utility for multi-device project management",
         "AUTHOR": "Daniel Austin <the.potato.gnome@gmail.com>",
-        "VERSION": "0.5.0",
+        "VERSION": "0.5.10",
         "MAIN_ENTRY_POINT": "src/Syncbot/main.py",
         "BUILD_TYPE": "Core",
         "LICENSE_TYPE": "MIT",
@@ -13,7 +13,7 @@
     },
     "ROOTS": {
         "PROJECT": "C:/Repository/Daniel/dev_local/Core/Syncbot",
-        "WORKSPACE": "C:/Repository/Daniel/dev_local",
+        "WORKSPACE": "C:/Repository/Daniel/dev_local/Prismata",
         "TUILKIT": "C:/Repository/Daniel/dev_local/Core/tUilKit",
         "TUILKit": "C:/Repository/Daniel/dev_local/Core/tUilKit"
     },
@@ -34,31 +34,19 @@
     "PATHS": {
         "TEST_CONFIG": ".tests_config/",
         "TEST_LOGS": ".tests_logs/Syncbot/",
-        "CONFIG": ".projects_config/",
-        "LOGS": ".logs/Syncbot/",
+        "CONFIG": ".workspace/.projects_config/",
+        "LOGS": ".workspace/.logs/Syncbot/",
         "INPUTS": ".projects_data/inputData//Syncbot/",
         "OUTPUTS": ".projects_data/outputData//Syncbot/",
         "TESTS_CONFIG": "tests/.config/",
         "TESTS_LOGS": "tests/.logs/",
         "TESTS_INPUTS": "tests/.inputData/",
-        "TESTS_OUTPUTS": "tests/.outputData/"
-    },
-    "SHARED_CONFIG": {
-        "ENABLED": true,
-        "PATH": "GLOBAL_SHARED.d/",
-        "FILES": {
-            "COLOURS": "COLOURS.json",
-            "BORDER_PATTERNS": "BORDER_PATTERNS.json",
-            "TESTS_OPTIONS": "TESTS_OPTIONS.json",
-            "TIME_STAMP_OPTIONS": "TIME_STAMP_OPTIONS.json"
-        }
+        "TESTS_OUTPUTS": "tests/.outputData/",
+        "GLOBAL_SHARED.d": ".workspace/.projects_config/GLOBAL_SHARED.d/"
     },
     "ALT_CONFIG": {
         "ENABLED": false,
         "FILE_PATHS": []
-    },
-    "SECONDARY": {
-        "FILE": "Syncbot_SECONDARY.json"
     },
     "LOG_FILES": {
         "DEBUG": "Syncbot_DEBUG.log",
@@ -71,6 +59,9 @@
         "FS": "Syncbot_FS.log",
         "CONFIG_READ": "Syncbot_CONFIG_READ.log",
         "ERROR": "Syncbot_ERROR.log"
+    },
+    "SECONDARY": {
+        "FILE": "Syncbot_SECONDARY.json"
     },
     "LOG_CATEGORIES": {
         "debug": [

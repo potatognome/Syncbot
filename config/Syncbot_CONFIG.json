@@ -41,7 +41,8 @@
         "TESTS_CONFIG": "tests/.config/",
         "TESTS_LOGS": "tests/.logs/",
         "TESTS_INPUTS": "tests/.inputData/",
-        "TESTS_OUTPUTS": "tests/.outputData/"
+        "TESTS_OUTPUTS": "tests/.outputData/",
+        "GLOBAL_SHARED.d": ".workspace/.projects_config/GLOBAL_SHARED.d/"
     },
     "ALT_CONFIG": {
         "ENABLED": false,
@@ -119,16 +120,6 @@
             "CONFIG_READ",
             "ERROR"
         ]
-    },
-    "SHARED_CONFIG": {
-        "ENABLED": true,
-        "PATH": "GLOBAL_SHARED.d/",
-        "FILES": {
-            "COLOURS": "COLOURS.json",
-            "BORDER_PATTERNS": "BORDER_PATTERNS.json",
-            "TESTS_OPTIONS": "TESTS_OPTIONS.json",
-            "TIME_STAMP_OPTIONS": "TIME_STAMP_OPTIONS.json"
-        }
     },
     "INFO_DISPLAY": "VERBOSE",
     "WORKSPACE": {
