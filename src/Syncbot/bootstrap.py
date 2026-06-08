@@ -24,21 +24,26 @@ def resolve_syncbot_config_path(anchor_file=None):
         else:
             project_root = anchor.parent
 
-    workspace_root = project_root.parent.parent
-    prismata_workspace_config = (
-        workspace_root
-        / "Prismata"
-        / ".workspace"
-        / ".projects_config"
-        / "Syncbot_CONFIG.json"
-    )
-    workspace_config = workspace_root / ".projects_config" / "Syncbot_CONFIG.json"
+    # Prefer nearest workspace-level config discovered from project ancestors.
+    workspace_config_candidates = []
+    for parent in [project_root, *project_root.parents]:
+        workspace_config_candidates.append(
+            parent / ".workspace" / ".projects_config" / "Syncbot_CONFIG.json"
+        )
+        workspace_config_candidates.append(
+            parent / ".projects_config" / "Syncbot_CONFIG.json"
+        )
+        # Backward-compatible Prismata nesting fallback.
+        workspace_config_candidates.append(
+            parent / "Prismata" / ".workspace" / ".projects_config" / "Syncbot_CONFIG.json"
+        )
+
     local_config = project_root / "config" / "Syncbot_CONFIG.json"
 
-    if prismata_workspace_config.exists():
-        return prismata_workspace_config
-    if workspace_config.exists():
-        return workspace_config
+    for candidate in workspace_config_candidates:
+        if candidate.exists():
+            return candidate
+
     return local_config
 
 

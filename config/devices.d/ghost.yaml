@@ -56,7 +56,6 @@ NODES:
     path: .
     connected_hub_IDs:
     - nas_primary
-    - onedrive_fallback
     is_primary: true
     enabled: true
     Recursive: true
@@ -64,11 +63,14 @@ NODES:
     create_versioned_backups: false
     only_update_newer: true
     is_project_folder: false
-  /dev_local/:
-    name: /dev_local/
-    path: ./Dev
+  dev_local:
+    name: dev_local
+    path: ./Prismata/Projects
+    connected_hub_IDs:
+    - nas_dev-core_[project]
     is_primary: false
     enabled: true
+    Recursive: true
     repository_role: NODE
     node_type: PROJECT
     ownership: danie:daniel
